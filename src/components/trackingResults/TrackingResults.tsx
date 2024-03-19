@@ -37,6 +37,14 @@ const TrackingResults: React.FC = () => {
         <div className="tracking-details">
           <h2>Tracking Details</h2>
           <p>Tracking Number: {data.provider}</p>
+          <p>CreateDate: {data.CreateDate}</p>
+          <p>CurrentStatus.state: {data.CurrentStatus.state}</p>
+          <p>CurrentStatus.timestamp: {data.CurrentStatus.timestamp}</p>
+          <p>PromisedDate: {data.PromisedDate}</p>
+          <p>SupportPhoneNumbers: {data.SupportPhoneNumbers}</p>
+          <p>TrackingNumber: {data.TrackingNumber}</p>
+          <p>TrackingURL: {data.TrackingURL}</p>
+          <p>isEditableShipment: {data.isEditableShipment}</p>
           {/* Display other relevant tracking details */}
         </div>
       )}
