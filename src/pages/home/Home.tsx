@@ -1,9 +1,10 @@
-import React from "react";
+import { useTranslation } from "react-i18next";
 
 const Home = () => {
+  const { t } = useTranslation();
   return (
     <div>
-      <p>home</p>
+      <p>{t("navbar.navTabs.home")}</p>
     </div>
   );
 };

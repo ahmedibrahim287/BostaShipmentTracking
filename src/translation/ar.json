@@ -1,0 +1,23 @@
+{
+    "navbar": {
+        "lang": "ENG",
+        "navTabs": {
+            "home": "الرئيسية",
+            "prices": "الاسعار",
+            "call": "كلم المبيعات",
+            "track": "تتبع شحنتك",
+            "login": "تسجيل الدخول"
+        }
+    },
+    "provider": "الموزع",
+    "Tracking Number": "رقم التتبع",
+    "CreateDate": "تاريخ الإنشاء",
+    "CurrentStatus.state": "الحالة الحالية",
+    "CurrentStatus.timestamp": "التوقيت الزمني للحالة",
+    "PromisedDate": "التاريخ المتوعد",
+    "SupportPhoneNumbers": "أرقام الهاتف للدعم",
+    "TrackingURL": "رابط التتبع",
+    "isEditableShipment": "الشحنة قابلة للتحرير",
+    "Tracking Details": "تفاصيل التتبع",
+    "error": "لا يمكن العثور على أي سجل لرقم التتبع هذا في الوقت الحالي ، يرجى التحقق من الرقم والمحاولة مرة أخرى لاحقًا. لمزيد من المساعدة ، يرجى التواصل بخدمة العملاء."
+}

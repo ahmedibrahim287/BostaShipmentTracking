@@ -1,0 +1,23 @@
+{
+    "navbar": {
+        "lang": "AR",
+        "navTabs": {
+            "home": "Home",
+            "prices": "Prices",
+            "call": "Call sales",
+            "track": "Track your order",
+            "login": "Login"
+        }
+    },
+    "provider": "provider",
+    "Tracking Number": "Tracking Number",
+    "CreateDate": "Create Date",
+    "CurrentStatus.state": "Current Status",
+    "CurrentStatus.timestamp": "Status Timestamp",
+    "PromisedDate": "Promised Date",
+    "SupportPhoneNumbers": "Support Phone Numbers",
+    "TrackingURL": "Tracking URL",
+    "isEditableShipment": "Editable Shipment",
+    "Tracking Details": "Tracking Details",
+    "error": "No record of this tracking number can be found at this time, please check the number and try again later. For further assistance, please contact Customer Service."
+}

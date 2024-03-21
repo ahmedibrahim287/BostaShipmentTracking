@@ -1,0 +1,34 @@
+@import "../../index.css";
+
+.btnLang {
+  font-family: var(--primaryFont);
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.btnLang:hover,
+.btnLang:focus,
+.btnLang:active,
+.btnLang:focus-visible,
+.btnLang:focus-within,
+.btnLang:visited,
+.btnLang:target {
+  color: var(--primaryColor) !important;
+  background-color: transparent !important;
+  font-family: var(--primaryFont) !important;
+  font-weight: 700 !important;
+  font-size: 17px !important;
+}
+
+.tracking-results {
+  position: fixed; /* or absolute */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent background */
+  z-index: 9999; /* ensure it's on top of other content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

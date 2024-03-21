@@ -1,53 +1,48 @@
-// components/TrackingResults.tsx
 import React, { FormEvent, useState } from "react";
+import { useAppDispatch } from "../../app/hooks";
 import { fetchTrackingData } from "./trackingSlice";
-import { useAppDispatch, useAppSelector } from "../../app/hooks";
-import { RootState } from "../../app/store";
+import { useNavigate } from "react-router-dom";
 
 const TrackingResults: React.FC = () => {
   const dispatch = useAppDispatch();
-  const { data, isLoading, error } = useAppSelector(
-    (state: RootState) => state.tracking
-  );
+  const navigate = useNavigate();
+
   const [trackingNumber, setTrackingNumber] = useState("");
 
   const handleTrackingSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    dispatch(fetchTrackingData(trackingNumber));
+    if (trackingNumber.trim() !== "") {
+      dispatch(fetchTrackingData(trackingNumber));
+      // Redirect to tracking details page
+      navigate(`/tracking-shipment/${trackingNumber}`);
+    }
   };
 
-  console.log(data?.CurrentStatus.state);
+  // Function to handle input change and allow numbers only
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const value = event.target.value;
+    // Only set the tracking number if it contains numbers only
+    if (/^\d*$/.test(value)) {
+      setTrackingNumber(value);
+    }
+  };
+
   return (
     <div className="tracking-results">
       <form onSubmit={handleTrackingSubmit}>
         <input
-          type="number"
-          name="trackingNumber"
+          className="search form-control me-2"
+          type="text"
+          pattern="\d*"
           placeholder="Enter tracking number"
+          aria-label="Enter tracking number"
           value={trackingNumber}
-          onChange={(e) => setTrackingNumber(e.target.value)}
+          onChange={handleInputChange}
         />
-        <button type="submit">Track</button>
+        <button type="submit" className="btn btn-outline-secondary">
+          Track
+        </button>
       </form>
-
-      {isLoading && <p>Loading...</p>}
-      {error && <p>Error: {error}</p>}
-
-      {data && (
-        <div className="tracking-details">
-          <h2>Tracking Details</h2>
-          <p>Tracking Number: {data.provider}</p>
-          <p>CreateDate: {data.CreateDate}</p>
-          <p>CurrentStatus.state: {data.CurrentStatus.state}</p>
-          <p>CurrentStatus.timestamp: {data.CurrentStatus.timestamp}</p>
-          <p>PromisedDate: {data.PromisedDate}</p>
-          <p>SupportPhoneNumbers: {data.SupportPhoneNumbers}</p>
-          <p>TrackingNumber: {data.TrackingNumber}</p>
-          <p>TrackingURL: {data.TrackingURL}</p>
-          <p>isEditableShipment: {data.isEditableShipment}</p>
-          {/* Display other relevant tracking details */}
-        </div>
-      )}
     </div>
   );
 };
