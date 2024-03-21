@@ -54,13 +54,15 @@ const TrackingResults: React.FC = () => {
               value={trackingNumber}
               onChange={handleInputChange}
             />
-            <img
-              className={`${
-                isRTL ? styles.svg : styles.svgEn
-              } position-absolute`}
-              style={{ color: "white" }}
-              src={searchIcon}
-            />
+            <button type="submit">
+              <img
+                className={`${
+                  isRTL ? styles.svg : styles.svgEn
+                } position-absolute`}
+                style={{ color: "white" }}
+                src={searchIcon}
+              />
+            </button>
           </form>
         </div>
       </div>
