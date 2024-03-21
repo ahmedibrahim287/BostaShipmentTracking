@@ -9,6 +9,29 @@
             "login": "Login"
         }
     },
+    "trackShipment": {
+        "orderNumber": "Order Number",
+        "orderCancel": "Order Canceled",
+        "lastUpdate": "Last Update",
+        "merchantName": "Merchant Name",
+        "deliveryTime": "Delivery time",
+        "DELIVERED": "Delivered",
+        "DELIVERED_TO_SENDER": "Delivered to sender",
+        "CANCELLED": "Cancelled"
+    },
+    "addresses": {
+        "cairoSortingFacility": "Cairo Sorting Facility"
+    },
+    "orderDetails": {
+        "shipmentDetails": "Shipment Details",
+        "branch": "Branch",
+        "date": "Date",
+        "time": "Time",
+        "details": "Details",
+        "deliveryAddress": "Delivery address",
+        "problem": "Is there a problem with your shipment?",
+        "reportProblem": "Report the problem"
+    },
     "provider": "provider",
     "Tracking Number": "Tracking Number",
     "CreateDate": "Create Date",

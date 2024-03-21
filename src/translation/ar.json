@@ -9,6 +9,29 @@
             "login": "تسجيل الدخول"
         }
     },
+    "trackShipment": {
+        "orderNumber": "رقم الشحنة",
+        "orderCancel": "تم الغاء الشحنة",
+        "lastUpdate": "اخر تحديث",
+        "merchantName": "اسم التاجر",
+        "deliveryTime": "موعد التسليم",
+        "DELIVERED": "تم التسليم",
+        "DELIVERED_TO_SENDER": "تم التسليم إلى المرسل",
+        "CANCELLED": "تم الالغاء"
+    },
+    "addresses": {
+        "cairoSortingFacility": "منشأة القاهرة للفرز"
+    },
+    "orderDetails": {
+        "shipmentDetails": "تفاصيل الشحنة",
+        "branch": "الفرع",
+        "date": "التاريخ",
+        "time": "الوقت",
+        "details": "تفاصيل",
+        "deliveryAddress": "عنوان التسليم",
+        "problem": "هل يوجد مشكلة في شحنتك؟",
+        "reportProblem": "ابلاغ عن المشكلة"
+    },
     "provider": "الموزع",
     "Tracking Number": "رقم التتبع",
     "CreateDate": "تاريخ الإنشاء",

@@ -5,7 +5,7 @@ import { useAppSelector } from "../../app/hooks";
 import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
 import Stepper from "../../components/stepper/stepper";
-
+import OrderDetails from "../../components/orderDetails/OrderDetails";
 const TrackingShipments = () => {
   const { data, isLoading, error } = useAppSelector(
     (state: RootState) => state.tracking
@@ -45,37 +45,17 @@ const TrackingShipments = () => {
 
   return (
     <>
-      <Stepper status={data.CurrentStatus.state} />
+      <section className="container " style={{ marginTop: "12%" }}>
+        <div className="container-fluid">
+          <div className="row " style={{ gap: "6rem" }}>
+            <Stepper status={data.CurrentStatus.state} />
 
-      <div className="tracking-results">
-        <div className="tracking-details">
-          <h2>{t("Tracking Details")}</h2>
-          <p>
-            {t("CreateDate")}: {data.CreateDate}
-          </p>
-          <p>
-            {t("CurrentStatus.state")}: {data.CurrentStatus.state}
-          </p>
-          <p>
-            {t("CurrentStatus.timestamp")}: {data.CurrentStatus.timestamp}
-          </p>
-          <p>
-            {t("PromisedDate")}: {data.PromisedDate}
-          </p>
-          <p>
-            {t("SupportPhoneNumbers")}: {data.SupportPhoneNumbers}
-          </p>
-          <p>
-            {t("TrackingNumber")}: {data.TrackingNumber}
-          </p>
-          <p>
-            {t("TrackingURL")}: {data.TrackingURL}
-          </p>
-          <p>
-            {t("isEditableShipment")}: {data.isEditableShipment}
-          </p>
+            <div className="col-12 p-0">
+              <OrderDetails data={data} />
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };

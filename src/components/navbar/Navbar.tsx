@@ -101,7 +101,12 @@ const navbar = () => {
                 >
                   {t("navbar.navTabs.track")}
                 </button>
-                <ul className="dropdown-menu">
+
+                <ul
+                  className={`dropdown-menu ${
+                    clicked ? "show" : styles["unShow"]
+                  } `}
+                >
                   <li>
                     <TrackingResults />
                   </li>

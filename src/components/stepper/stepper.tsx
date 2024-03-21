@@ -26,14 +26,42 @@ const ProgressBar: React.FC<ProgressBarProps> = ({ status }) => {
   }
 
   return (
-    <div className="progress position-relative">
-      <div
-        className={`progress-bar ${getProgressBarColor(percentage)}`}
-        role="progressbar"
-        aria-label="Progress"
-        style={{ width: `${percentage}%` }}
-      >
-        <div className={styles.circle}>{percentage}%</div>
+    <div className="col-12 border border-secondary-subtle p-0 border-opacity-25 ">
+      <div className="container">
+        <div className="row">
+          <div className="col-12">
+            <div className="container">
+              <div className="row">
+                <div className="col-3">asd</div>
+                <div className="col-3">asd</div>
+                <div className="col-3">asd</div>
+                <div className="col-3">asd</div>
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div className="col-12"></div>
+          <div className="progress position-relative">
+            <div
+              className={`progress-bar ${getProgressBarColor(percentage)}`}
+              role="progressbar"
+              aria-label="Progress"
+              style={{ width: `${percentage}%` }}
+            >
+              <div className={styles.circle}>{percentage}%</div>
+            </div>
+          </div>
+        </div>
+        <div className="col-12">
+          <div className="container">
+            <div className="row">
+              <div className="col-3">asd</div>
+              <div className="col-3">asd</div>
+              <div className="col-3">asd</div>
+              <div className="col-3">asd</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
