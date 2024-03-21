@@ -21,9 +21,7 @@ export const fetchTrackingData = createAsyncThunk(
       const newTrackingNumber = parseInt(trackingNumber, 10); // Assuming base 10
       return await TrackingResultService.getTrackingResult(newTrackingNumber);
     } catch (error) {
-      return rejectWithValue(
-        error.response?.data?.message || "Unknown error occurred"
-      );
+      return rejectWithValue("Unknown error occurred");
     }
   }
 );

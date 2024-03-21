@@ -11,7 +11,8 @@ import { useEffect, useRef, useState } from "react";
 const navbar = () => {
   const isRTL = useIsRTL();
   const { t } = useTranslation();
-
+  const dropdownRef = useRef<HTMLLIElement>(null); // Change type to HTMLLIElement
+  const [isOpen, setIsOpen] = useState(false);
   const [clicked, setClicked] = useState(false);
 
   const handleClick = () => {
@@ -19,12 +20,12 @@ const navbar = () => {
     setIsOpen(!isOpen);
   };
 
-  const [isOpen, setIsOpen] = useState(false);
-  const dropdownRef = useRef(null);
-
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
         setIsOpen(false);
         setClicked(false);
       }

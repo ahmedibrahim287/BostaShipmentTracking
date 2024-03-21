@@ -31,7 +31,11 @@ const ProgressBar: React.FC<ProgressBarProps> = ({ status, data }) => {
   }
 
   let date = new Date(data.PromisedDate);
-  let options = { year: "numeric", month: "long", day: "numeric" };
+  let options: Intl.DateTimeFormatOptions = {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  };
   let formattedDate = date.toLocaleDateString("en-US", options);
 
   let statusClass = ""; // Initialize an empty string for the class name
