@@ -6,6 +6,7 @@
             "prices": "Prices",
             "call": "Call sales",
             "track": "Track your order",
+            "trackNumber": "Track number",
             "login": "Login"
         }
     },
@@ -15,9 +16,11 @@
         "lastUpdate": "Last Update",
         "merchantName": "Merchant Name",
         "deliveryTime": "Delivery time",
+        "CREATED": "Create shipment",
         "DELIVERED": "Delivered",
+        "OUT_TO_DELIVERED": "Out To Delivered",
         "DELIVERED_TO_SENDER": "Delivered to sender",
-        "CANCELLED": "Cancelled"
+        "CANCELLED": "Order Cancelled"
     },
     "addresses": {
         "cairoSortingFacility": "Cairo Sorting Facility"

@@ -1,0 +1,32 @@
+.fontForm {
+  font-family: var(--primaryFont);
+}
+
+.fontForm p {
+  font-size: 17px;
+  font-weight: 600;
+  color: gray;
+}
+.inputSearch {
+  color: red;
+}
+
+.svg {
+  background-color: var(--primaryColor);
+  width: 13%;
+  top: -1% !important;
+  left: 24% !important;
+  padding: 10px;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.svgEn {
+  background-color: var(--primaryColor);
+  width: 13%;
+  top: -1% !important;
+  right: 24% !important;
+  padding: 10px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}

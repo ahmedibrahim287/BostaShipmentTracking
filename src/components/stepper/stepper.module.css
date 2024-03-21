@@ -12,3 +12,23 @@
   text-align: center;
   background-color: rgba(0, 0, 0, 0.7);
 }
+.spanCancel {
+  color: var(--primaryColor);
+}
+.heading {
+  font-family: var(--primaryFont);
+}
+
+.headingH {
+  color: #858585 !important;
+}
+
+.statusSuccess {
+  color: rgb(25, 135, 84) !important;
+}
+.statusWarning {
+  color: rgb(255, 193, 7) !important;
+}
+.statusFail {
+  color: var(--primaryColor) !important;
+}

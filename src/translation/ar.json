@@ -6,6 +6,7 @@
             "prices": "الاسعار",
             "call": "كلم المبيعات",
             "track": "تتبع شحنتك",
+            "trackNumber": "رقم التتبع",
             "login": "تسجيل الدخول"
         }
     },
@@ -14,10 +15,12 @@
         "orderCancel": "تم الغاء الشحنة",
         "lastUpdate": "اخر تحديث",
         "merchantName": "اسم التاجر",
-        "deliveryTime": "موعد التسليم",
-        "DELIVERED": "تم التسليم",
-        "DELIVERED_TO_SENDER": "تم التسليم إلى المرسل",
-        "CANCELLED": "تم الالغاء"
+        "deliveryTime": "موعد التسليم خلال",
+        "CREATED": "تم انشاء الشحنة",
+        "DELIVERED_TO_SENDER": "تم استلام الشحنة من التاجر",
+        "OUT_TO_DELIVERED": "الشحنة خرجت للتسليم",
+        "CANCELLED": "تم الالغاء الشحنة",
+        "DELIVERED": "تم تسليم الشحنة"
     },
     "addresses": {
         "cairoSortingFacility": "منشأة القاهرة للفرز"

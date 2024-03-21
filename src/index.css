@@ -21,11 +21,15 @@ body {
 
 html {
   scroll-behavior: smooth;
-  height: 2000px;
+  height: 115vh;
 }
 
 body {
   margin: 0 !important;
   padding: 0 !important;
   overflow: unset !important;
+}
+
+::placeholder {
+  color: gray !important;
 }

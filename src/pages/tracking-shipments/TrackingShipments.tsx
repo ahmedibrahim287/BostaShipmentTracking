@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
 import Stepper from "../../components/stepper/stepper";
 import OrderDetails from "../../components/orderDetails/OrderDetails";
+import styles from "./tracking-shipment.module.css";
 const TrackingShipments = () => {
   const { data, isLoading, error } = useAppSelector(
     (state: RootState) => state.tracking
@@ -23,9 +24,9 @@ const TrackingShipments = () => {
 
   if (isLoading) {
     return (
-      <div className="tracking-results">
+      <div className={styles["tracking-results"]}>
         <div className="spinner-border" role="status">
-          <span className="visually-hidden">Loading...</span>
+          <span className="visually-hidden"></span>
         </div>
       </div>
     );
@@ -45,10 +46,10 @@ const TrackingShipments = () => {
 
   return (
     <>
-      <section className="container " style={{ marginTop: "12%" }}>
+      <section className="container margin-top-6">
         <div className="container-fluid">
           <div className="row " style={{ gap: "6rem" }}>
-            <Stepper status={data.CurrentStatus.state} />
+            <Stepper status={data.CurrentStatus.state} data={data} />
 
             <div className="col-12 p-0">
               <OrderDetails data={data} />

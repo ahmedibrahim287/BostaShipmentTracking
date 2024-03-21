@@ -6,7 +6,7 @@ import useIsRTL from "../../app/CustomHooks/useIsRTL";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import styles from "./Navbar.module.css";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const navbar = () => {
   const isRTL = useIsRTL();
@@ -16,9 +16,28 @@ const navbar = () => {
 
   const handleClick = () => {
     setClicked(!clicked);
+    setIsOpen(!isOpen);
   };
 
-  console.log(clicked);
+  const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsOpen(false);
+        setClicked(false);
+      }
+    };
+
+    // Bind the event listener
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      // Unbind the event listener on cleanup
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [dropdownRef]);
+
   return (
     <>
       <nav className="navbar navbar-expand-lg padding-top-1 pb-0 ">
@@ -80,6 +99,7 @@ const navbar = () => {
               }  mb-2 mb-lg-0 justify-content-center align-items-lg-center `}
             >
               <li
+                ref={dropdownRef}
                 className={`${
                   clicked ? styles["nav-item-overwrite"] : "nav-item "
                 }  dropdown`}
@@ -101,16 +121,17 @@ const navbar = () => {
                 >
                   {t("navbar.navTabs.track")}
                 </button>
-
-                <ul
-                  className={`dropdown-menu ${
-                    clicked ? "show" : styles["unShow"]
-                  } `}
-                >
-                  <li>
-                    <TrackingResults />
-                  </li>
-                </ul>
+                {isOpen && (
+                  <ul
+                    className={`dropdown-menu ${styles.dropdownOverwrite} ${
+                      clicked ? "show" : styles["unShow"]
+                    } `}
+                  >
+                    <li className="h-100">
+                      <TrackingResults />
+                    </li>
+                  </ul>
+                )}
               </li>
 
               <div
@@ -131,7 +152,7 @@ const navbar = () => {
           </div>
         </div>
       </nav>
-      <hr className="m-0 mt-2 d-none  d-lg-block " />
+      <hr className="m-0 mt-1 d-none  d-lg-block " />
     </>
   );
 };
