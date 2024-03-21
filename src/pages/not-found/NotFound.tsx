@@ -1,11 +1,8 @@
 import React from "react";
 
-const NotFound = () => {
-  return (
-    <div>
-      <p>not found</p>
-    </div>
-  );
+const NotFound: React.FC = () => {
+  // Your component logic here
+  return <div>Not Found</div>;
 };
 
 export default NotFound;

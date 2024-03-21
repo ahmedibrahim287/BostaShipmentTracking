@@ -29,6 +29,4 @@ function App() {
   );
 }
 
-// 7234258   ////   13737343 ///// 67151313
-
 export default App;
